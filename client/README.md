@@ -1,1 +1,0 @@
-Basic Chat app testing Metero+React.
