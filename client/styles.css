@@ -1,0 +1,60 @@
+body {
+  width: 500px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #333;
+  font-weight: 100;
+}
+
+
+h2 {
+  border-bottom: 2px solid orange;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+input[name="message"] {
+  width: 90%;
+  padding: 7px 10px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  box-shadow: inset 0px 1px 2px 0px #ccc;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul li {
+  min-height: 38px;
+  line-height: 30px;
+}
+
+ul li input[value="Delete"] {
+  margin-top: 0px;
+}
+
+ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2980b9;
+}
+
+h2 a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+footer {
+  background-color: orange;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  overflow:hidden;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+}
