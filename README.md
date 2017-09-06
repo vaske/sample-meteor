@@ -1,1 +1,1 @@
-Basic Chat app testing Metero+React. 
+Basic Chat app testing Meteor+React. 
