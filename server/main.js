@@ -8,7 +8,8 @@ Meteor.startup(() => {
 	  addMessage(text) {
 			let message = {
 		  	time: new Date(),
-		  	text: text
+		  	text: text,
+			  userEmail:Meteor.user().emails[0].address
 			};
 
 			Messages.insert(message);

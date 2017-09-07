@@ -23,3 +23,5 @@ react
 momentjs:moment
 session                 
 jquery                  
+accounts-password
+okgrow:accounts-ui-react

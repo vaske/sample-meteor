@@ -9,7 +9,7 @@ Message = React.createClass({
   
   render() {
     return (
-      <li className="">{this.formatTime(this.props.message.time)} - {this.props.message.text}</li>
+      <li className="">{this.props.message.userEmail}<small>({this.formatTime(this.props.message.time)})</small> - {this.props.message.text}</li>
     );
   }
 });
