@@ -19,13 +19,14 @@ MessageList = React.createClass({
     });
   },
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
     
     let message = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
 
 	  // send message to BE
-    Meteor.call("addMessage", message);
+    //Meteor.call("addMessage", message);
+    Meteor.subscribe('addMessagePublish', message);
 
     ReactDOM.findDOMNode(this.refs.textInput).value = "";
   },

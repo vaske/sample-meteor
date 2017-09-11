@@ -15,4 +15,21 @@ Meteor.startup(() => {
 			Messages.insert(message);
 	  }
 	});
+
+	Meteor.publish('addMessagePublish', function(text){
+		let message = {
+			time: new Date(),
+			text: text,
+			userEmail:Meteor.user().emails[0].address
+		};
+
+		Messages.insert(message);
+	});
+
+
+	Meteor.publish('lists', function(){
+    return Messages.find();
+	});
+	
+	
 });
