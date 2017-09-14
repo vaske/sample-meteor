@@ -1,4 +1,6 @@
-Message = React.createClass({
+const createReactClass = require('create-react-class');
+
+Message = createReactClass({
   propTypes: {
     message: React.PropTypes.object.isRequired
   },

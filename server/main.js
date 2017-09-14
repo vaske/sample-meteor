@@ -28,8 +28,7 @@ Meteor.startup(() => {
 
 
 	Meteor.publish('lists', function(){
-    return Messages.find();
-	});
-	
+    	return Messages.find({}, {sort: {time: -1}});
+	});	
 	
 });

@@ -2,8 +2,10 @@
 import { LoginButtons } from 'meteor/okgrow:accounts-ui-react';
 
 import { createContainer } from 'meteor/react-meteor-data';
+const createReactClass = require('create-react-class');
 
-MessageList = React.createClass({
+
+MessageList = createReactClass({
   mixins: [ReactMeteorData],
 
   getMeteorData() {
@@ -14,7 +16,11 @@ MessageList = React.createClass({
   },
   
   renderMessages() {
-    return this.data.messages.map((message) => {
+    Meteor.subscribe('lists');    
+
+    let messages = Messages.find({}, {sort: {time: -1}}).fetch(); 
+
+    return messages.map((message) => {
       return <Message key={message._id} message={message} />;
     });
   },
@@ -29,6 +35,11 @@ MessageList = React.createClass({
     Meteor.subscribe('addMessagePublish', message);
 
     ReactDOM.findDOMNode(this.refs.textInput).value = "";
+  },
+
+  logout(e) {
+    e.preventDefault();
+    Meteor.logout();
   },
 
   renderForm() {
@@ -49,6 +60,7 @@ MessageList = React.createClass({
           <header>
             <h2>Chat Messages</h2>
           </header>
+          <a onClick={this.logout}>Logout</a>
           <LoginButtons />
           {this.renderForm()}
 

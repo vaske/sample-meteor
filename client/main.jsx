@@ -9,12 +9,8 @@ if (Meteor.isClient) {
   Meteor.subscribe('lists');
 
   Meteor.startup(function () {
-      ReactDOM.render(<MessageList />, document.getElementById("app"));
+      ReactDOM.render(<MainPage />, document.getElementById("app"));
   });
 }
 
-if(Meteor.isServer){
-    Meteor.publish('addMessagePublish');
-    Meteor.publish('lists');
-}
 
