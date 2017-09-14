@@ -1,5 +1,7 @@
 import tether from 'tether';
 global.Tether = tether;
+import Popper from 'popper.js';
+window.Popper = Popper;
 
 bootstrap = require('bootstrap');
 
